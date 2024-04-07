@@ -1,0 +1,25 @@
+<!-- inherit from base.html-->
+
+
+{% extends "workout_app/base_template.html" %}
+
+
+<body style="background-color:aquamarine;">
+<!-- Replace block content in base_template.html -->
+{% block content %}
+    <h1>Check Students Portfoilios</h1>
+    
+    <ul class="list-group">
+        {% for i in athelete_active_workouts %}
+            
+            <li class ="list-group-item">Name: {{i.name}}
+            <form action=" main_menu/ " method="get">
+            <p><strong>Workout:{{ i.workout.title }}
+            <input type="submit" value="View">
+            
+            </strong></p>
+           
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

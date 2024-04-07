@@ -1,0 +1,20 @@
+{% extends "workout_app/base_template.html" %}
+
+{% block content %}
+ 
+<title>Workout Detail</title>
+</head>
+
+<body style="background-color:aquamarine;">  
+<!-- Specify fields to be displayed -->
+for
+    <h1>Workout Detail</h1>
+    <p><strong>ID:</strong> {{ workout.id }}</p>
+    <p><strong>Name:</strong> {{ workout.title }}</p>
+    <p><strong>Description:</strong> {{ workout.description }}</p>
+    <!-- Add more fields as needed -->
+
+    <!-- You can also add links or buttons for editing or navigating back -->
+    <a href="{% url 'atheletes' %}">Back to workout List</a>
+
+{% endblock %}

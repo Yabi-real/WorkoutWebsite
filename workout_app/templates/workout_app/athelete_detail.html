@@ -1,0 +1,32 @@
+{% extends 'workout_app/base_template.html' %}
+
+{% block content %}
+<body style="background-color:aquamarine;">
+   <h1> Athelete: {{ athelete.name }}</h1>
+   <p><strong>Athelete active:</strong> {{ athelete.portfolio.is_active }}</p>
+   <p><strong>Email:</strong> {{ athelete.email }}</p>
+   <p><strong>Sport:</strong> {{ athelete.sport }}</p>
+    <td><strong>Workout:</strong>
+       
+
+    </td>
+   
+    
+         <h2><strong>Projects:</strong></h2>
+         <p><strong></strong>{{ workout.title }}</p>
+
+      
+      <p><strong>Menu:{{ athelete.workout.title }}
+         
+        
+         
+        
+         <td><a class="btn btn-primary btn-sm btn-block" href="{% url 'create-workout' athelete.id %}">Create</a></td>
+      
+      <td><a class="btn btn-primary btn-sm btn-block" href="{% url 'view-workout' athelete.id %}">Workout</a></td>
+      <td><a class="btn btn-primary btn-sm btn-block" href="{% url 'list-workout' %}">View List Workout</a></td>
+
+      
+ 
+
+{% endblock %}

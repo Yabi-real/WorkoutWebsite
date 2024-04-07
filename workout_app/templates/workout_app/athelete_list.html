@@ -1,0 +1,19 @@
+{% extends 'workout_app/base_template.html' %}
+
+{% block content %}
+<body style="background-color:aquamarine;">
+   <h1> Athelete List </h1>
+   {% if athelete_list %}
+      <ul>
+         {% for athelete in athelete_list %}
+             <li>
+                <a href="{{ athelete.get_absolute_url }}">{{ athelete.name }}</a>
+             </li>
+         {% endfor %}
+     </ul>
+   {% else %}
+      <p>There are no athelete registered. </p>
+   {% endif %}
+{% endblock %}
+
+

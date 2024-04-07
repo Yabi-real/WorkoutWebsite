@@ -1,0 +1,18 @@
+{% extends 'workout_app/base_template.html' %}
+
+
+{% block content %}
+<body style="background-color:aquamarine;">
+ {% for p in  athelete_active_workout %}
+     
+    <!-- Specify fields to be displayed -->
+    {{ p.title }}<br/>
+    {{ p.description }}<br/>
+    <p></p>
+    <p></p>
+    <td><a class="btn btn-primary btn-sm btn-block" href="{% url 'delete-workout' p.id %}">Delete</a></td>
+    <td><a class="btn btn-primary btn-sm btn-block" href="{% url 'update-workout' p.id %}">Update</a></td>
+   {% endfor %}
+ </div>
+
+{% endblock %}

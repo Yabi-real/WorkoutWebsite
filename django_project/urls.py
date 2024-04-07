@@ -20,5 +20,8 @@ urlpatterns = [
    # path('admin/', admin.site.urls),
     #connect path to portfolio_app urls
     path('', include('workout_app.urls')),
+    
+    path('admin/', admin.site.urls),
+
 ]
 
